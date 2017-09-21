@@ -22,7 +22,9 @@ function findLocalFiles() {
 
     for(let i=0;i<allFiles.length;i++) {
         var ext = path.extname(allFiles[i]);
-        if(ext === '.wav') {
+        //If you need to support more file types, do so here
+        //Reference: https://docs.microsoft.com/en-us/azure/media-services/media-services-media-encoder-standard-formats
+        if(ext === '.flac' || ext === '.wav') {
             matched.push(allFiles[i]);
         }
     }
