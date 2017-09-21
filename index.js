@@ -69,8 +69,7 @@ function processFile(fileName) {
     })
     .then(function (result) {
         return writeVttFile(fileName, result.body);
-    })
-    .then(function() { console.log(`${videoId} complete!`) });
+    });
 }
 
 function writeVttFile(fileName, vttContents) {
